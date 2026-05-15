@@ -41,7 +41,9 @@ Created a resource group in Microsoft Azure to contain all resources used in the
 ### Step 2: Deploy the Windows 10 and Ubuntu Virtual Machines
 Created a Windows 10 VM and an Ubuntu VM in the same resource group and virtual network.
 
-![Step 2](images/02-vms-created.png)
+<p align="center">
+  <img src="images/windows_ubuntu-vms.png" alt="Step 1 - Resource Group" width="80%">
+</p>
 
 ### Step 3: Verify Both VMs Are on the Same Virtual Network
 Confirmed both virtual machines were attached to the same VNet and subnet.
