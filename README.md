@@ -2,8 +2,6 @@
   <img src="azure_networking_and_protocol_analysis_overview.png" alt="Azure Networking and Protocol Analysis Lab Header" width="100%">
 </p>
 
-# Azure Networking and Protocol Analysis Lab
-
 ## Project Summary
 This project demonstrates the deployment of Windows and Linux virtual machines in Microsoft Azure and the analysis of network traffic between them using Wireshark. The goal was to build a small cloud-based networking lab, observe common protocols in action, and test how Azure Network Security Groups affect connectivity. The lab included ICMP, SSH, DHCP, DNS, and RDP traffic analysis.
 
