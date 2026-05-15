@@ -48,7 +48,9 @@ Created a Windows 10 VM and an Ubuntu VM in the same resource group and virtual 
 ### Step 3: Verify Both VMs Are on the Same Virtual Network
 Confirmed both virtual machines were attached to the same VNet and subnet.
 
-![Step 3](images/03-same-vnet.png)
+<p align="center">
+  <img src="images/same-vnet-subnet.png" alt="Step 1 - Resource Group" width="80%">
+</p>
 
 ### Step 4: Observe ICMP Traffic
 Connected to the Windows VM using Remote Desktop, installed Wireshark, filtered for ICMP traffic, and pinged the Ubuntu VM using its private IP address.
