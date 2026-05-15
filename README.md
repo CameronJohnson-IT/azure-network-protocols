@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="azure_networking_and_protocol_analysis_overview.png" alt="Azure Networking and Protocol Analysis Lab Header" width="85%">
+  <img src="azure_networking_and_protocol_analysis_overview.png" alt="Azure Networking and Protocol Analysis Lab Header" width="100%">
 </p>
 
 # Azure Networking and Protocol Analysis Lab
