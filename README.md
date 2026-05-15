@@ -42,14 +42,14 @@ Created a resource group in Microsoft Azure to contain all resources used in the
 Created a Windows 10 VM and an Ubuntu VM in the same resource group and virtual network.
 
 <p align="center">
-  <img src="images/windows_ubuntu-vms.png" alt="Step 1 - Resource Group" width="80%">
+  <img src="images/02-windows_ubuntu-vms.png" alt="Step 1 - Resource Group" width="80%">
 </p>
 
 ### Step 3: Verify Both VMs Are on the Same Virtual Network
 Confirmed both virtual machines were attached to the same VNet and subnet.
 
 <p align="center">
-  <img src="images/same-vnet-subnet.png" alt="Step 1 - Resource Group" width="80%">
+  <img src="images/03-same-vnet-subnet.png" alt="Step 1 - Resource Group" width="80%">
 </p>
 
 ### Step 4: Observe ICMP Traffic
