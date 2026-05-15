@@ -63,7 +63,7 @@ Connected to the Windows VM using Remote Desktop, installed Wireshark, filtered 
 Started a continuous ping from the Windows VM to the Ubuntu VM, then blocked inbound ICMP traffic in the Ubuntu VM’s Network Security Group and observed the impact in both the command line and Wireshark. Re-enabled ICMP traffic and confirmed connectivity resumed.
 
 <p align="center">
-  <img src="05-nsg-block-icmp.png" alt="Step 5: Test NSG Firewall Behavior" width="80%">
+  <img src="images/05-nsg-block-icmp.png" alt="Step 5: Test NSG Firewall Behavior" width="80%">
 </p>
 
 ### Step 6: Observe SSH Traffic
