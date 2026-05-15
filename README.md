@@ -55,7 +55,9 @@ Confirmed both virtual machines were attached to the same VNet and subnet.
 ### Step 4: Observe ICMP Traffic
 Connected to the Windows VM using Remote Desktop, installed Wireshark, filtered for ICMP traffic, and pinged the Ubuntu VM using its private IP address.
 
-![Step 4](images/04-icmp-traffic.png)
+<p align="center">
+  <img src="images/04-icmp-traffic.png" alt="Step 1 - Resource Group" width="80%">
+</p>
 
 ### Step 5: Test NSG Firewall Behavior
 Started a continuous ping from the Windows VM to the Ubuntu VM, then blocked inbound ICMP traffic in the Ubuntu VM’s Network Security Group and observed the impact in both the command line and Wireshark. Re-enabled ICMP traffic and confirmed connectivity resumed.
