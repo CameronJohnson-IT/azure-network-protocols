@@ -32,8 +32,7 @@ This project demonstrates the deployment of Windows and Linux virtual machines i
 ### Step 1: Create the Azure Resource Group
 Created a resource group in Microsoft Azure to contain all resources used in the lab.
 
-![Step 1](<img width="1688" height="748" alt="Screenshot 2026-05-14 203707" src="https://github.com/user-attachments/assets/a5a5fd64-663a-457c-a4b3-5bf5f173524d" />
-)
+![Step 1](<img width="1688" height="748" alt="Screenshot 2026-05-14 203707" src="https://github.com/user-attachments/assets/a5a5fd64-663a-457c-a4b3-5bf5f173524d" />)
 
 ### Step 2: Deploy the Windows 10 and Ubuntu Virtual Machines
 Created a Windows 10 VM and an Ubuntu VM in the same resource group and virtual network.
