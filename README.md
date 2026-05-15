@@ -1,4 +1,4 @@
-<img width="1672" height="941" alt="Azure Networking Header" src="https://github.com/user-attachments/assets/26b46ef0-a010-4964-82dc-858798c3e293" />
+![Azure Networking and Protocol Analysis Lab Header](azure_networking_and_protocol_analysis_overview.png)
 
 # Azure Networking and Protocol Analysis Lab
 
