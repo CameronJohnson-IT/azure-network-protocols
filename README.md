@@ -1,57 +1,102 @@
-<p align="center">
-<img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
-</p>
+# Azure Networking and Protocol Analysis Lab
 
-<h1>Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines</h1>
-In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. <br />
+## Project Summary
+This project demonstrates the deployment of Windows and Linux virtual machines in Microsoft Azure and the analysis of network traffic between them using Wireshark. The goal was to build a small cloud-based networking lab, observe common protocols in action, and test how Azure Network Security Groups affect connectivity. The lab included ICMP, SSH, DHCP, DNS, and RDP traffic analysis.
 
-
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: Azure Virtual Machines, Wireshark, and Network Security Groups](https://www.youtube.com)
-
-<h2>Environments and Technologies Used</h2>
-
-- Microsoft Azure (Virtual Machines/Compute)
+## Technologies Used
+- Microsoft Azure
+- Azure Virtual Machines
+- Azure Virtual Network
+- Network Security Groups (NSGs)
+- Wireshark
 - Remote Desktop
-- Various Command-Line Tools
-- Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
-- Wireshark (Protocol Analyzer)
+- PowerShell
+- SSH
 
-<h2>Operating Systems Used </h2>
+## Environments Used
+- Windows 10 Virtual Machine
+- Ubuntu Linux Virtual Machine
+- Microsoft Azure
 
-- Windows 10 (21H2)
-- Ubuntu Server 20.04
+## Project Objectives
+- Create a resource group in Azure
+- Deploy Windows and Linux virtual machines
+- Place both VMs in the same virtual network and subnet
+- Observe ICMP traffic using Wireshark
+- Use an NSG to block and re-enable inbound ICMP traffic
+- Observe SSH, DHCP, DNS, and RDP traffic
+- Practice packet analysis and cloud networking fundamentals
 
-<h2>High-Level Steps</h2>
+## Implementation Steps
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+### Step 1: Create the Azure Resource Group
+Created a resource group in Microsoft Azure to contain all resources used in the lab.
 
-<h2>Actions and Observations</h2>
+![Step 1](<img width="1688" height="748" alt="Screenshot 2026-05-14 203707" src="https://github.com/user-attachments/assets/a5a5fd64-663a-457c-a4b3-5bf5f173524d" />
+)
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+### Step 2: Deploy the Windows 10 and Ubuntu Virtual Machines
+Created a Windows 10 VM and an Ubuntu VM in the same resource group and virtual network.
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+![Step 2](images/02-vms-created.png)
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+### Step 3: Verify Both VMs Are on the Same Virtual Network
+Confirmed both virtual machines were attached to the same VNet and subnet.
+
+![Step 3](images/03-same-vnet.png)
+
+### Step 4: Observe ICMP Traffic
+Connected to the Windows VM using Remote Desktop, installed Wireshark, filtered for ICMP traffic, and pinged the Ubuntu VM using its private IP address.
+
+![Step 4](images/04-icmp-traffic.png)
+
+### Step 5: Test NSG Firewall Behavior
+Started a continuous ping from the Windows VM to the Ubuntu VM, then blocked inbound ICMP traffic in the Ubuntu VM’s Network Security Group and observed the impact in both the command line and Wireshark. Re-enabled ICMP traffic and confirmed connectivity resumed.
+
+![Step 5](images/05-nsg-block-icmp.png)
+
+### Step 6: Observe SSH Traffic
+Filtered Wireshark for SSH traffic and used PowerShell on the Windows VM to SSH into the Ubuntu VM using its private IP address.
+
+![Step 6](images/06-ssh-traffic.png)
+
+### Step 7: Observe DHCP Traffic
+Ran `ipconfig /renew` in PowerShell as administrator on the Windows VM and observed DHCP-related traffic in Wireshark.
+
+![Step 7](images/07-dhcp-traffic.png)
+
+### Step 8: Observe DNS Traffic
+Used `nslookup` to query public domains and observed DNS traffic in Wireshark.
+
+![Step 8](images/08-dns-traffic.png)
+
+### Step 9: Observe RDP Traffic
+Filtered Wireshark for `tcp.port == 3389` and observed the continuous RDP traffic generated by the remote desktop session.
+
+![Step 9](images/09-rdp-traffic.png)
+
+### Step 10: Lab Cleanup
+Closed the Remote Desktop session, deleted the Azure resource group, and verified resource deletion.
+
+## Demonstration / Results
+This project successfully demonstrated:
+- Windows and Linux VM communication within the same Azure virtual network
+- ICMP request and reply traffic in Wireshark
+- Network Security Group filtering behavior
+- SSH traffic between the Windows and Ubuntu virtual machines
+- DHCP traffic during IP renewal
+- DNS traffic during name resolution
+- Continuous RDP traffic over TCP port 3389
+
+## Skills Demonstrated
+- Microsoft Azure
+- Virtual Machine Deployment
+- Azure Virtual Networking
+- Network Security Groups
+- Wireshark Packet Analysis
+- ICMP, SSH, DHCP, DNS, and RDP Protocol Analysis
+- Troubleshooting
+- Network Fundamentals
+
+## Key Takeaways
+This lab improved my understanding of how Azure virtual networking works and how common protocols appear in real packet captures. It also reinforced how firewall rules and NSGs affect connectivity and helped connect classroom networking concepts to hands-on practice.
