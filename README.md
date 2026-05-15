@@ -42,28 +42,28 @@ Created a resource group in Microsoft Azure to contain all resources used in the
 Created a Windows 10 VM and an Ubuntu VM in the same resource group and virtual network.
 
 <p align="center">
-  <img src="images/02-windows_ubuntu-vms.png" alt="Step 1 - Resource Group" width="80%">
+  <img src="images/02-windows_ubuntu-vms.png" alt="Step 2 - Deploy the Windows 10 and Ubuntu Virtual Machines" width="80%">
 </p>
 
 ### Step 3: Verify Both VMs Are on the Same Virtual Network
 Confirmed both virtual machines were attached to the same VNet and subnet.
 
 <p align="center">
-  <img src="images/03-same-vnet-subnet.png" alt="Step 1 - Resource Group" width="80%">
+  <img src="images/03-same-vnet-subnet.png" alt="Step 3: Verify Both VMs Are on the Same Virtual Network" width="80%">
 </p>
 
 ### Step 4: Observe ICMP Traffic
 Connected to the Windows VM using Remote Desktop, installed Wireshark, filtered for ICMP traffic, and pinged the Ubuntu VM using its private IP address.
 
 <p align="center">
-  <img src="images/04-icmp-traffic.png" alt="Step 1 - Resource Group" width="80%">
+  <img src="images/04-icmp-traffic.png" alt="Step 4: Observe ICMP Traffic" width="80%">
 </p>
 
 ### Step 5: Test NSG Firewall Behavior
 Started a continuous ping from the Windows VM to the Ubuntu VM, then blocked inbound ICMP traffic in the Ubuntu VM’s Network Security Group and observed the impact in both the command line and Wireshark. Re-enabled ICMP traffic and confirmed connectivity resumed.
 
 <p align="center">
-  <img src="05-nsg-block-icmp.png" alt="Step 1 - Resource Group" width="80%">
+  <img src="05-nsg-block-icmp.png" alt="Step 5: Test NSG Firewall Behavior" width="80%">
 </p>
 
 ### Step 6: Observe SSH Traffic
